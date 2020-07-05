@@ -10,12 +10,11 @@ const app = express()
 const port = process.env.PORT || 3000
 const fileTemplate = path.join(__dirname, '../templetes/views')
 const partialPath = path.join(__dirname, '../templetes/partials')
-const imagePath = path.join(__dirname, '../templetes/img')
 
 app.set('view engine', 'hbs')
 app.set('views', fileTemplate)
 hbd.registerPartials(partialPath)
-app.use(express.static(imagePath)); 
+app.use(express.static('../templetes/img')); 
 
 app.get('', (req, res)=>{
 
