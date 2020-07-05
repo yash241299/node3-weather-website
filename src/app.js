@@ -6,6 +6,8 @@ const forecast = require('./utils/forecast')
 
 //Changed Commit
 const app = express()
+
+const port = process.env.PORT || 3000
 const fileTemplate = path.join(__dirname, '../templetes/views')
 const partialPath = path.join(__dirname, '../templetes/partials')
 const imagePath = path.join(__dirname, '../templetes/img')
@@ -94,7 +96,7 @@ app.get('*', (req, res)=> {
     })
 
 })
-app.listen(3000, () => {
+app.listen(port, () => {
 
-    console.log('Server is Running.')
+    console.log('Server is Running...')
 })

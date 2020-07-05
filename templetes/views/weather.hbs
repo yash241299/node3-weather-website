@@ -50,7 +50,7 @@
         msg2.textContent = ""
         msg3.textContent = ""
         const location = search.value
-        fetch('http://localhost:3000/fetchweather?address='+location).then((response)=>{  
+        fetch('/fetchweather?address='+location).then((response)=>{  
           response.json().then((data) => {
 
             if(data.error){
